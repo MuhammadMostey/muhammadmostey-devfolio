@@ -1,0 +1,41 @@
+
+<!-- condition ? () : () -->
+<!-- {nameOfparamete or attribute} -->
+<!-- -->
+
+
+<!-- first, creating three variable using const as props in astro where they can be placed
+     as place holders in the code using {nameOfparamete or attribute} this is the same as
+     class variables or properties or fields when defined in a class, and the what passed in 
+     once implemented are called the argument of an the instance itself   -->
+---
+const {title, url, currentpath} = Astro.props;
+---
+
+<!-- the conditional is placed between {} same as the props whrere one will be selected using conditional
+     condition ? () : () -->
+
+
+
+<a href={"/" + url} class="relative group">
+    {title}
+    {
+        currentpath === url ? (
+            <span 
+                class="inline-block w-full h-[1px] absolute left-0 -bottom-1 bg-dark">
+                    &nbsp;
+            </span>
+        ) : (
+            <span 
+                class="inline-block w-0 h-[1px] absolute left-0 -bottom-1 bg-dark 
+                group-hover:w-full transition-[width] ease duration-300 ">
+                    &nbsp;
+            </span>
+
+        )
+
+    
+    }
+
+
+</a>
