@@ -33,6 +33,10 @@
 # typescript the ? sign in the inteface makes the attribute value that needs to be given as optonal
 # class ={`relative ${css} top-0 group-hover:-top-1 transition-[top] ease duration-300`} we add the values of calass between {`class values`} instead of "" because we gonna use an variable by inserting through by the attribut if defined by the initilized component ${}
 
+
+
+# Night Mode, and new classes, and Modifers: adding a new class to the tailwind just by 1. setting its name and value to class in the framework json configration for tailwind `darkMode: "class"` and 2. then in the value of `calss="dark" ` in html tag, 3. then in body tag add in dark: modifier which means when that is activated then take specific sttings as following `class="dark:bg-dark dark:text-ligt text-dark bg-light"`
+
 export interface props {
     icon: string;
     title: string;
