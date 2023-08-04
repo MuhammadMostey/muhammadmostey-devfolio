@@ -22,12 +22,12 @@ const {title, url, currentpath} = Astro.props;
     {
         currentpath === url ? (
             <span 
-                class="inline-block w-full h-[1px] absolute left-0 -bottom-1 bg-dark">
+                class="inline-block w-full h-[1px] absolute left-0 -bottom-1 bg-dark dark:bg-light">
                     &nbsp;
             </span>
         ) : (
             <span 
-                class="inline-block w-0 h-[1px] absolute left-0 -bottom-1 bg-dark 
+                class="inline-block w-0 h-[1px] absolute left-0 -bottom-1 bg-dark dark:bg-light
                 group-hover:w-full transition-[width] ease duration-300 ">
                     &nbsp;
             </span>
