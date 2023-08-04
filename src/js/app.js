@@ -6,6 +6,14 @@ class PageHandler {
 
       document.querySelector("#colorSwitch").addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
+
+        if (localStorage.getItem("theme") == "dark"){
+          localStorage.setItem("theme", "");
+        }
+        else {
+          localStorage.setItem("theme", "dark");
+        }
+
       });
 
     }
