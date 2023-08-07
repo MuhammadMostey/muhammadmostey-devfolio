@@ -1,4 +1,5 @@
 class PageHandler {
+    
     constructor() {
       if (localStorage.getItem("theme") == "dark") {
         document.documentElement.classList.add("dark");
@@ -13,10 +14,11 @@ class PageHandler {
         else {
           localStorage.setItem("theme", "dark");
         }
-
       });
 
     }
+
+
 }
 
 const init = () => {
