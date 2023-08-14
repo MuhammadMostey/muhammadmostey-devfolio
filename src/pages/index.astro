@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import devguy from '../assets/images/developer-guy.png';
+import profileimage from '../assets/images/muhammad.png';
 import { Image } from 'astro:assets';
+
 ---
 
 <Layout title="Muhammad Mostey | Home" description="My website Home Page">
     <div class="flex flex-row justify-between items-center">
         <div class=" w-1/2 flex justify-center items-center py-10">
-            <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
+            <!-- <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/> -->
+            <Image src={profileimage} width={720} height={720} alt="A rocketship in space." quality={100} format="webp" />
         </div>
         
         <div></div>
