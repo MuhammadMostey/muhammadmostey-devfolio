@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import devguy from '../assets/images/developer-guy.png';
+import { Image } from 'astro:assets';
 ---
 
-<Layout title="Muhammad Mostey | Home" description='My website Home Page'>
+<Layout title="Muhammad Mostey | Home" description="My website Home Page">
     <div class="flex flex-row justify-between items-center">
         <div class=" w-1/2 flex justify-center items-center py-10">
-            <img src="../images/developer-guy.png" alt="image" />
+            <Image src={devguy } width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
         </div>
         
         <div></div>

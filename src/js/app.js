@@ -35,6 +35,7 @@ class PageHandler {
             colorSwitch.innerHTML = `
 
                 <img src="/icons/sun.svg" alt="sun" class="w-5 h-5" />
+              
             
             `
 
