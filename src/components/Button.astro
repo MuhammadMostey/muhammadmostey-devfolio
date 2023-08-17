@@ -5,11 +5,15 @@ import {Icon} from "astro-icon";
 ---
 
 
-<a href={url} target={external ? "_blank": undefined} class="">
-    {title}
+<a href={url} 
+    target={external ? "_blank": undefined} 
+    class="inline-flex items-center rounded-lg border-2 border-solid bg-dark text-light py-2 px-6 font-semibold hover:border-dark hover:bg-transparent hover:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light ">
+    
+    <span> {title} </span>
+
     {
         external ? (
-            <Icon >
+            <Icon />
         ) : ("")
     }
 </a>

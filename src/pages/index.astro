@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import devguy from '../assets/images/developer-guy.png';
+import resume from '../assets/documents/Resume - Muhammad Mostey.pdf';
 import { Image } from 'astro:assets';
 import Button from '../components/Button.astro';
 
@@ -34,8 +35,9 @@ import Button from '../components/Button.astro';
                 JavaScript am besten machst. Update! -->
             </div>
 
-            <Button  url="../../" external="true" title="Resume"/>
-            <a href="../assets/documents/"></a>
+            <Button  url={resume} external="true" title="Resume" />
+            
+            
 
         </div>
         
