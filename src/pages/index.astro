@@ -35,7 +35,12 @@ import Button from '../components/Button.astro';
                 JavaScript am besten machst. Update! -->
             </div>
 
-            <Button  url={resume} external="true" title="Resume" />
+            <div class="flex flex-row justify-between items-center ">
+                <Button  url={resume} external="true" title="Resume" direction="" />
+                
+                <Button  url={resume}  title="Projects" direction="down" />
+            </div>
+
             
             
 

@@ -1,9 +1,9 @@
 
 ---
-const {url, external, title} = Astro.props;
+const {url, external, direction, title} = Astro.props;
 import {Icon} from "astro-icon";
----
 
+---
 
 
 <p class="m-0">
@@ -11,7 +11,7 @@ import {Icon} from "astro-icon";
       href={url}
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
-      class="inline-flex items-center rounded-lg border-2 border-solid bg-dark text-light p-2 px-4 md:py-2.5 md:px-6 font-semibold hover:border-dark hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light"
+      class="inline-flex items-center rounded-lg border-2 border-solid  bg-dark text-light mx-2 px-4 md:py-2.5 md:px-6 font-semibold hover:border-dark hover:bg-transparent hover:text-dark dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light"
     >
       <span>{title}</span>
       {
@@ -20,6 +20,13 @@ import {Icon} from "astro-icon";
         ) : (
           ""
         )
+
+        
       }
+
+      {
+        direction === "down" ? (<Icon name="ph:arrow-square-down" width="24" height="24" class="ml-2" />):("")
+      }
+
     </a>
   </p>
