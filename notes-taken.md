@@ -56,3 +56,10 @@ export interface props {
 				light: "#f5f5f5",
 				dark: "#1b1b1b", 
 			},
+
+
+
+
+### TO DO LIST  ###
+* assign projects button to the link
+* adjust the style of projects button to something else.
