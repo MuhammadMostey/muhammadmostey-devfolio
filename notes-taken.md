@@ -47,6 +47,8 @@ export interface props {
 
 
 
+# rel property: any link that is associated for example with <a> tag or button, you can specify its rel, which means the relation of the link to your website, if you set it to "noopener noreferrer" means that this link don't refer to anything related to your website, this is for search engine.
+
 
 
 * added some colors to the tailwind by adjusting the "tailwind.config.cjs" file within this proj
