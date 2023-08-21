@@ -65,3 +65,11 @@ export interface props {
 ### TO DO LIST  ###
 * assign projects button to the link
 * adjust the style of projects button to something else.
+
+
+
+#### DE Version
+Home -> Tagline -> Visionen mit Code und Technologie zum Leben erwecken.
+Home -> Button -> Kontakt
+
+About -> H1 -> Wer bin ich?
