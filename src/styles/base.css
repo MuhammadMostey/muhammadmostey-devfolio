@@ -3,3 +3,8 @@
 @tailwind utilities;
 
 
+@layer base {
+    h1 {
+      @apply text-4xl  mb-11 text-blue-400  ;
+    }
+}
