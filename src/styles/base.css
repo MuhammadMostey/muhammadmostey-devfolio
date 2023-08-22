@@ -2,10 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
-    h1 {
-      @apply text-4xl  mb-11 text-blue-400 ml-80 ;
-    }
-}
+  h1 {
+    @apply text-4xl  mb-6 inline-block;
+  }
 
+  h2,
+  h3 {
+    @apply text-2xl  my-6 ;
+  }
+
+  h1::before,
+  h2::before,
+  h3::before {
+    @apply mr-4 text-blue-700 dark:text-green-400;
+    content: "#";
+  }
+
+  p {
+    @apply my-4 leading-relaxed;
+  }
+
+  h1 + p {
+    @apply first-letter:text-4xl  first-letter:font-bold;
+  }
+
+
+}
