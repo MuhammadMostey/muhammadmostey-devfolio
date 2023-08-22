@@ -9,13 +9,11 @@ export default defineConfig({
       config: {
         applyBaseStyles: false,
       },
-    }
-
-  )],
+    } ) ],
 
   experimental: {
     assets: true
    },
 
-   
+
 });
