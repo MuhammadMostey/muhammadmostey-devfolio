@@ -21,50 +21,16 @@
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-
-
   h1::before,
   h2::before,
-  h3::before {
-    @apply mr-4 text-blue-700 dark:text-green-400;
+  h3::before{
+    @apply mr-4 text-pink dark:text-yellow-300;
     content: "#";
-  }
+  }  
 
 
 
-  h1 + p {
-    @apply first-letter:text-4xl  first-letter:font-bold;
-  } */
+
 
 
 }
