@@ -30,10 +30,10 @@
 
 
   /*checking the text audit - to be removed after the finalizing*/
-  *::spelling-error{
+  p::spelling-error{
     @apply text-red-600;
   }
-  *::grammar-error{
+  p::grammar-error{
     @apply text-red-600;
   }
 
