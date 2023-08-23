@@ -29,13 +29,6 @@
   }  
 
 
-  /*checking the text audit - to be removed after the finalizing*/
-  p::spelling-error{
-    @apply text-red-600;
-  }
-  p::grammar-error{
-    @apply text-red-600;
-  }
 
 
 
