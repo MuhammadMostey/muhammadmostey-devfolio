@@ -28,6 +28,9 @@
     content: "#";
   }  
 
+  p > a {
+    @apply text-pink dark:text-yellow-300 hover:underline;
+  }
 
 
 

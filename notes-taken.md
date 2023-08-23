@@ -78,6 +78,9 @@ export interface props {
 * assign projects button to the link
 * adjust the style of projects button to something else.
 
+* style key-information class to be more obvious than other text all are in span.
+
+* check if 2 buttons in the main page are the same size.
 
 
 
@@ -88,3 +91,5 @@ Home -> Tagline -> Visionen mit Code und Technologie zum Leben erwecken.
 Home -> Button -> Kontakt
 
 About -> H1 -> Wer bin ich?
+uses -> H1 -> Was ich verwende
+
