@@ -29,7 +29,13 @@
   }  
 
 
-
+  /*checking the text audit - to be removed after the finalizing*/
+  *::spelling-error{
+    @apply text-red-600;
+  }
+  *::grammar-error{
+    @apply text-red-600;
+  }
 
 
 
