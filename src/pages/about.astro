@@ -1,5 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro'
 ---
 
 <Layout title="Muhammad Mostey | About">
@@ -23,7 +24,29 @@ import Layout from '../layouts/Layout.astro';
     
     <!-- Skills -->
     <h2 id="skills" > Skills </h2>
-    <p></p>
+
+    <div class="grid grid-cols-4 my-6 gap-4">
+
+        <Card>
+            <span slot="title"> Programming Languages </span>
+            <div class="py-0.5">Java</div>
+            <div class="py-0.5">Python</div>
+            <div class="py-0.5">Javascript</div>
+            <div class="py-0.5">HTML & CSS</div>
+        </Card>
+
+        <Card>
+            <span slot="title"> Languages </span>
+            <div class="py-0.5">English</div>
+            <div class="py-0.5">German</div>
+            <div class="py-0.5">Arabic</div>
+            <div class="py-0.5">French</div>
+            <div class="py-0.5">Kurdish</div>
+            <div class="py-0.5">Turkish</div>
+        </Card>
+
+
+    </div>
 
 	
 </Layout>
