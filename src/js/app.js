@@ -7,6 +7,7 @@ class PageHandler {
       }
 
       this.setThemeIcon();
+      // this.typeWriterManager();  // uncomment once finish this function dev
       
       document.querySelector("#colorSwitch").addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
@@ -40,6 +41,21 @@ class PageHandler {
         }
 
     }
+
+
+    // typeWriterManager function, switchs between the titles on the homepage as per the given array.
+    
+    typeWriterManager(){
+
+      let dynamicHeaderElement = document.querySelector("#dynamic-header-text");
+      if (dynamicHeaderElement === null) return;
+      
+      let dynamicHeaderTextArray = ["Full Stack Developer", "Java Developer", "Python Developer"];
+      let i = 0;
+
+      let 
+    }
+
 
   // pageHandler class ends here    
 }
