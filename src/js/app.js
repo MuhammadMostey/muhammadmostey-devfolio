@@ -80,7 +80,7 @@ class PageHandler {
           currentIndex++;
           setTimeout(typeWriter, 500);
         } else {
-          
+          setTimeout(typeWriter, 100);
         }
 
         
