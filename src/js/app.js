@@ -7,7 +7,7 @@ class PageHandler {
       }
 
       this.setThemeIcon();
-      // this.typeWriterManager();  // uncomment once finish this function dev
+      this.typeWriterManager(); 
       
       document.querySelector("#colorSwitch").addEventListener("click", () => {
         document.documentElement.classList.toggle("dark");
@@ -60,7 +60,7 @@ class PageHandler {
       let typeWriter = () => {
         // build here the logik of text Funktion 11:23
 
-        currentWord = dynamicHeaderElement[currentIndex];
+        currentWord = dynamicHeaderTextArray[currentIndex];
         
         if (isDeleting){
           currentText = currentWord.substring(0, currentText.length-1);
