@@ -72,8 +72,9 @@ class PageHandler {
 
         dynamicHeaderElement.innerHTML = currentText;
 
-        if (){
-
+        if (isDeleting && currentText === currentWord){
+          isDeleting = true;
+          setTimeout(typeWriter, 3000);
         }
 
         
