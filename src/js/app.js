@@ -75,6 +75,12 @@ class PageHandler {
         if (isDeleting && currentText === currentWord){
           isDeleting = true;
           setTimeout(typeWriter, 3000);
+        } else if (isDeleting && currentText === ""){
+          isDeleting = false;
+          currentIndex++;
+          setTimeout(typeWriter, 500);
+        } else {
+          
         }
 
         
