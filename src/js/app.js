@@ -59,6 +59,8 @@ class PageHandler {
       
       let typeWriter = () => {
         // build here the logik of text Funktion 11:23
+
+        currentWord = dynamicHeaderElement[currentIndex];
         
         if(isDeleting){
 
