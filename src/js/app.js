@@ -52,13 +52,23 @@ class PageHandler {
       
       let dynamicHeaderTextArray = ["Full Stack Developer", "Java Developer", "Python Developer"];
       let currentIndex = 0;
-      let currentWord = dynamicHeaderTextArray[i];
-      let currentText = dynamicHeaderTextArray[i];
+      let currentWord = dynamicHeaderTextArray[currentIndex];
+      let currentText = dynamicHeaderTextArray[currentIndex];
       
       let isDeleting = false;
       
       let typeWriter = () => {
         // build here the logik of text Funktion 11:23
+        
+        if(isDeleting){
+
+        }
+
+        if(!isDeleting){
+
+        }
+
+        
       }
 
       typeWriter()
