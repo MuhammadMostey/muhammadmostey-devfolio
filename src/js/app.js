@@ -71,6 +71,8 @@ class PageHandler {
 
         }
 
+        dynamicHeaderElement.innerHTML = currentText;
+
         
       }
 
