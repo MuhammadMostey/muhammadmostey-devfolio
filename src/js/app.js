@@ -64,12 +64,10 @@ class PageHandler {
         
         if(isDeleting){
           currentText = currentWord.substring(0, currentText.length-1);
-          document.innerHTML()
         }
 
         if(!isDeleting){
           currentText = currentWord.substring(0, currentText.length+1)
-
         }
 
         dynamicHeaderElement.innerHTML = currentText;
