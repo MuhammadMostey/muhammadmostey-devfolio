@@ -63,30 +63,35 @@ class PageHandler {
         currentWord = dynamicHeaderTextArray[currentIndex];
         
         if (isDeleting){
-          currentText = currentWord.substring(0, currentText.length-1);
+          currentText = currentWord.substring(0, currentText.length - 1);
         }
 
         if (!isDeleting){
-          currentText = currentWord.substring(0, currentText.length+1)
+          currentText = currentWord.substring(0, currentText.length + 1);
         }
 
         dynamicHeaderElement.innerHTML = currentText;
 
-        if (isDeleting && currentText === currentWord){
+        if (!isDeleting && currentText === currentWord){
           isDeleting = true;
-          setTimeout(typeWriter, 3000);
+          setTimeout(typeWriter, 1250);
+          
         } else if (isDeleting && currentText === ""){
           isDeleting = false;
           currentIndex++;
+          if (currentIndex == dynamicHeaderTextArray.length){
+            currentIndex = 0;
+          }
+          
           setTimeout(typeWriter, 500);
         } else {
-          setTimeout(typeWriter, 100);
+          setTimeout(typeWriter, 80);
         }
 
         
-      }
+      };
 
-      typeWriter()
+      typeWriter();
 
     }
 
