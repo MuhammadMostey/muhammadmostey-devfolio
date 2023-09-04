@@ -61,6 +61,10 @@ class PageHandler {
         // build here the logik of text Funktion 11:23
 
         currentWord = dynamicHeaderTextArray[currentIndex];
+        // if (currentText === ""){
+        //   dynamicHeaderElement.innerHTML =
+        //   "<span>hello</span>";
+        // }
         
         if (isDeleting){
           currentText = currentWord.substring(0, currentText.length - 1);
