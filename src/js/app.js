@@ -25,7 +25,7 @@ class PageHandler {
 
     }
 
-    // setThemeIcon function
+    // setThemeIcon function witin pageHandler class
     setThemeIcon(){
         let colorSwitch = document.querySelector("#colorSwitch");
         if (colorSwitch === null) return;
@@ -96,7 +96,7 @@ class PageHandler {
       };
 
       typeWriter();
-
+      // typeWriterManager function body ends here  
     }
 
 
@@ -105,7 +105,7 @@ class PageHandler {
 
 
 
-
+// init function to initialize a new PageHandler() object.
 const init = () => {
     new PageHandler();
 };
