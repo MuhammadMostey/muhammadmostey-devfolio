@@ -54,17 +54,18 @@ class PageHandler {
       let currentIndex = 0;
       let currentWord = dynamicHeaderTextArray[currentIndex];
       let currentText = dynamicHeaderTextArray[currentIndex];
-      
+      let emptystatus = "&nbsp;";
+
       let isDeleting = false;
       
       let typeWriter = () => {
         // build here the logik of text Funktion 11:23
 
         currentWord = dynamicHeaderTextArray[currentIndex];
-        // if (currentText === ""){
-        //   dynamicHeaderElement.innerHTML =
-        //   "<span>hello</span>";
-        // }
+  
+        
+        
+        // console.log(`current text is ${currentWord.substring(0, currentText.length-1)}`)
         
         if (isDeleting){
           currentText = currentWord.substring(0, currentText.length - 1);
@@ -72,15 +73,26 @@ class PageHandler {
 
         if (!isDeleting){
           currentText = currentWord.substring(0, currentText.length + 1);
+          // console.log(currentText);
         }
 
-        dynamicHeaderElement.innerHTML = currentText;
+        // console.log(`current text is after if ${currentText}`)
+
+        if (currentText.length == 0){
+          dynamicHeaderElement.innerHTML = emptystatus;  
+        } else{
+          dynamicHeaderElement.innerHTML = currentText;
+        }
+
+        
+        
 
         if (!isDeleting && currentText === currentWord){
+          console.log(`${!isDeleting && currentText === currentWord}`)
           isDeleting = true;
           setTimeout(typeWriter, 1250);
           
-        } else if (isDeleting && currentText === ""){
+        } else if (isDeleting && currentText/*.length == 1*/ === "") /**/{
           isDeleting = false;
           currentIndex++;
           if (currentIndex == dynamicHeaderTextArray.length){
@@ -90,6 +102,9 @@ class PageHandler {
           setTimeout(typeWriter, 500);
         } else {
           setTimeout(typeWriter, 80);
+          // if (currentText.length == 1 ){
+          //   isDeleting = false;
+          // }
         }
 
         
