@@ -70,8 +70,7 @@ class PageHandler {
           currentText = currentWord.substring(0, currentText.length + 1);
         }
 
-        // console.log(`current text is after if ${currentText}`)
-
+        // updates the span html element with current text value after it changes from the above conditionals, once currentText get's empty emptystatus will be applied which contains &nbsp;
         if (currentText.length == 0){
           dynamicHeaderElement.innerHTML = emptystatus;  
         } else{
