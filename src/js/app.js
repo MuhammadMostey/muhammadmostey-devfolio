@@ -60,14 +60,14 @@ class PageHandler {
       
       let typeWriter = () => {
         currentWord = dynamicHeaderTextArray[currentIndex];
-          
+        
+        // checking if it's in isDeleting mode or not, if true then each time the typeWriter function will be called the currentText will be less than the selected word with 1 index and vice versa 
         if (isDeleting){
           currentText = currentWord.substring(0, currentText.length - 1);
         }
 
         if (!isDeleting){
           currentText = currentWord.substring(0, currentText.length + 1);
-          // console.log(currentText);
         }
 
         // console.log(`current text is after if ${currentText}`)
