@@ -59,8 +59,6 @@ class PageHandler {
       let isDeleting = false;
       
       let typeWriter = () => {
-        // build here the logik of text Funktion 11:23
-
         currentWord = dynamicHeaderTextArray[currentIndex];
   
         
