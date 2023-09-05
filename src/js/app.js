@@ -75,33 +75,25 @@ class PageHandler {
           dynamicHeaderElement.innerHTML = currentText;
         }
 
-        
-        
-
+        // switches between isDeleting mode and normal mode, sets timeout and recall itself, 2. restes the currentWord index from the array to 0 when reches the length of array, 3. 
         if (!isDeleting && currentText === currentWord){
           console.log(`${!isDeleting && currentText === currentWord}`)
           isDeleting = true;
-          setTimeout(typeWriter, 1250);
-          
+          setTimeout(typeWriter, 1250); 
         } else if (isDeleting && currentText/*.length == 1*/ === "") /**/{
           isDeleting = false;
           currentIndex++;
-          if (currentIndex == dynamicHeaderTextArray.length){
-            currentIndex = 0;
-          }
-          
+          if (currentIndex == dynamicHeaderTextArray.length){ currentIndex = 0;}
           setTimeout(typeWriter, 500);
         } else {
           setTimeout(typeWriter, 80);
-          // if (currentText.length == 1 ){
-          //   isDeleting = false;
-          // }
         }
 
-        
+        //typeWriter function body ends here  
       };
 
       typeWriter();
+
       // typeWriterManager function body ends here  
     }
 
