@@ -75,9 +75,13 @@ class PageHandler {
           dynamicHeaderElement.innerHTML = currentText;
         }
 
-        // switches between isDeleting mode and normal mode, sets timeout and recall itself, 2. restes the currentWord index from the array to 0 when reches the length of array, 3. 
+        /* 
+        1. Switches between isDeleting mode and normal mode, 
+        2. Sets timeout and recall itself, 
+        3. Increases the index for array that holds the titles after the currentText is empty,
+        4. restes the currentWord index from the array to 0 when reches the length of array 
+        */
         if (!isDeleting && currentText === currentWord){
-          console.log(`${!isDeleting && currentText === currentWord}`)
           isDeleting = true;
           setTimeout(typeWriter, 1250); 
         } else if (isDeleting && currentText/*.length == 1*/ === "") /**/{
