@@ -44,7 +44,6 @@ class PageHandler {
 
 
     // typeWriterManager function, switchs between the titles on the homepage as per the given array.
-    
     typeWriterManager(){
       let dynamicHeaderElement = document.querySelector("#dynamic-header-text");
       if (dynamicHeaderElement === null) return;
