@@ -60,11 +60,7 @@ class PageHandler {
       
       let typeWriter = () => {
         currentWord = dynamicHeaderTextArray[currentIndex];
-  
-        
-        
-        // console.log(`current text is ${currentWord.substring(0, currentText.length-1)}`)
-        
+          
         if (isDeleting){
           currentText = currentWord.substring(0, currentText.length - 1);
         }
