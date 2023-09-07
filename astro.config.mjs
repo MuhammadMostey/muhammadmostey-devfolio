@@ -11,7 +11,8 @@ export default defineConfig({
     ) ],
 
   experimental: {
-    assets: true
+    // assets: true,
+    optimizeHoistedScript: true,
    },
 
 
