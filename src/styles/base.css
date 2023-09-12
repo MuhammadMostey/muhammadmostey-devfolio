@@ -20,6 +20,10 @@
     @apply first-letter:text-4xl first-letter:font-bold ;
   }
 
+  h1 + p {
+    @apply first-letter:text-4xl first-letter:font-bold;
+  }
+
 
   h1::before,
   h2::before,
