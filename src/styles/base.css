@@ -50,5 +50,9 @@
     @apply my-2 mx-4 list-disc ;
   }
 
+  pre {
+    @apply my-8 p-3 rounded-xl text-xl;
+  }
+
 
 }
