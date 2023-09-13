@@ -39,15 +39,15 @@
 
 
   #blog-post-div {
-    @apply border-2 border-dark dark:border-light py-2 px-4 w-1/2 m-4 ;
+    @apply float-right w-1/2 ;
   }
 
-  ul{
-    @apply list-disc px-4;
+  #blog-post-div > ul{
+    @apply list-disc border-2 border-dark dark:border-light rounded-xl py-2 px-4 my-8 text-base;
   }
 
-  li{
-    @apply list-disc px-4 ;
+  #blog-post-div li{
+    @apply my-2 mx-4 list-disc ;
   }
 
 
