@@ -9,7 +9,7 @@
   }
 
   h2, h3 {
-    @apply my-6 text-2xl;
+    @apply mb-6 mt-12 text-2xl;
   }
 
   p {
