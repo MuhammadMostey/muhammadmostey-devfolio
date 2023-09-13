@@ -39,7 +39,15 @@
 
 
   #blog-post-div {
-    
+    @apply border-2 border-dark dark:border-light py-2 px-4 w-1/2 m-4 ;
+  }
+
+  ul{
+    @apply list-disc px-4;
+  }
+
+  li{
+    @apply list-disc px-4 ;
   }
 
 
