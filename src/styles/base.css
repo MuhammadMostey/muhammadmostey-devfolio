@@ -5,7 +5,7 @@
 @layer base {
 
   h1 {
-    @apply text-4xl mb-4 inline-block;
+    @apply text-4xl mb-4;
   }
 
   h2, h3 {
@@ -54,5 +54,8 @@
     @apply my-8 p-3 rounded-xl text-xl;
   }
 
+  p > code {
+    @apply px-2 bg-pink dark:bg-yellow-300 text-ligt dark:text-dark rounded-lg whitespace-nowrap;
+  }
 
 }
