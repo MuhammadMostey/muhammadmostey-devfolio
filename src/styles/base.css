@@ -24,7 +24,6 @@
     @apply first-letter:text-4xl first-letter:font-bold;
   }
 
-
   h1::before,
   h2::before,
   h3::before{
@@ -35,7 +34,6 @@
   p > a {
     @apply text-pink dark:text-yellow-300 hover:underline;
   }
-
 
 
   #blog-post-div {
@@ -55,7 +53,7 @@
   }
 
   p > code {
-    @apply px-2 bg-pink dark:bg-yellow-300 text-ligt dark:text-dark rounded-lg whitespace-nowrap;
+    @apply px-2 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap;
   }
 
 }
