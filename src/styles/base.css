@@ -38,7 +38,7 @@
 
 
   #blog-post-div {
-    @apply float-right w-1/2 ml-4 mr-2;
+    @apply float-right w-1/2 ml-4 mr-12;
   }
 
   #blog-post-div > ul{
@@ -57,5 +57,8 @@
     @apply px-2 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap ;
   }
 
+  .NavigationSocialBar{
+    @apply mr-12;
+  }
 
 }
