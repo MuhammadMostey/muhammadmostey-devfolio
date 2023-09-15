@@ -4,18 +4,19 @@ import devguy from '../assets/images/developer-guy.png';
 import resume from '../assets/documents/Resume - Muhammad Mostey.pdf';
 import { Image } from 'astro:assets';
 import Button from '../components/Button.astro';
-
-
-
 ---
 
 <Layout title="Muhammad Mostey | Home" description="My website Home Page">
+
+
     <div class="flex flex-row justify-between items-center">
         
+
         <div class=" w-1/2 flex justify-center items-center py-10">
             <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
         </div>
         
+
         <div class="w-1/2 flex flex-col justify-between items-center pb-11">
             
             <!-- <div class=" flex justify-center text-4xl mb-2  "> -->
@@ -34,7 +35,6 @@ import Button from '../components/Button.astro';
                 <!-- <span class=" "> Full Stack Developer </span>  -->
             </div>
             
-
             <div class="mb-6 leading-relaxed "> 
             
                 Bringing visions to life with code and <span class="text-pink dark:text-yellow-300"> technology. </span> 
@@ -55,14 +55,10 @@ import Button from '../components/Button.astro';
 
             </div>
 
-            
-            
-
         </div>
         
-        
+
     </div>
 
 
-	
 </Layout>
