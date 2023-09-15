@@ -75,4 +75,9 @@
   .NavigationLinks{
     @apply ml-4;
   }
+
+  #skillCards{
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;    
+  }
 }
