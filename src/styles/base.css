@@ -50,7 +50,7 @@
   }
 
   pre {
-    @apply my-8 p-3 rounded-xl text-xl mx-6 ;
+    @apply my-6 p-3 rounded-xl text-xl mx-12 ;
   }
 
   p > code {
