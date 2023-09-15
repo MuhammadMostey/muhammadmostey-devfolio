@@ -71,4 +71,8 @@
   #skillCards{
     @apply mx-18;
   }
+
+  Button{
+    @apply mx-18;
+  }
 }
