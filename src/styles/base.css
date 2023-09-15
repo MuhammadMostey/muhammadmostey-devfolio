@@ -6,31 +6,37 @@
 
 
   h1 {
-    @apply text-4xl mb-4 mx-2;
+    @apply text-4xl mb-4 mx-8;
   }
 
   h2, h3 {
-    @apply mb-2 mt-12 text-2xl mx-2;
+    @apply mb-2 mt-12 text-2xl mx-8;
   }
 
   p {
-    @apply my-4 leading-relaxed mx-12;
+    @apply my-4 leading-relaxed; 
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
   }
 
   h1 + h2 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-12;
+    @apply first-letter:text-4xl first-letter:font-bold ;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
   }
 
   h1 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-12;
+    @apply first-letter:text-4xl first-letter:font-bold mx-16;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
   }
 
-  h1::before,
+   h1::before,
   h2::before,
   h3::before{
     @apply mr-2 text-pink dark:text-yellow-300 ;
     content: "#";
-  }  
+  }   
 
   p > a {
     @apply text-pink dark:text-yellow-300 hover:underline;
@@ -54,7 +60,9 @@
   }
 
   pre {
-    @apply my-6 p-3 rounded-xl text-xl mx-12 ;
+    @apply my-6 p-3 rounded-xl text-xl ;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
   }
 
   p > code {
@@ -64,5 +72,7 @@
   .NavigationSocialBar{
     @apply mr-6;
   }
-
+  .NavigationLinks{
+    @apply ml-4;
+  }
 }
