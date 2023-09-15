@@ -31,7 +31,7 @@
     margin-right: 4.5rem;
   }
 
-   h1::before,
+  h1::before,
   h2::before,
   h3::before{
     @apply mr-2 text-pink dark:text-yellow-300 ;
