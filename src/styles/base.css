@@ -14,21 +14,21 @@
   }
 
   p {
-    @apply my-4 leading-relaxed; 
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    @apply my-4 leading-relaxed mx-18; 
+    /* margin-left: 4.5rem;
+    margin-right: 4.5rem; */
   }
 
   h1 + h2 + p {
-    @apply first-letter:text-4xl first-letter:font-bold ;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    @apply first-letter:text-4xl first-letter:font-bold mx-18;
+    /* margin-left: 4.5rem;
+    margin-right: 4.5rem; */
   }
 
   h1 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-16;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    @apply first-letter:text-4xl first-letter:font-bold mx-18;
+    /* margin-left: 4.5rem;
+    margin-right: 4.5rem; */
   }
 
   h1::before,
@@ -60,9 +60,9 @@
   }
 
   pre {
-    @apply my-6 p-3 rounded-xl text-xl ;
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;
+    @apply my-6 p-3 rounded-xl text-xl mx-18;
+    /* margin-left: 4.5rem;
+    margin-right: 4.5rem; */
   }
 
   p > code {
@@ -77,7 +77,6 @@
   }
 
   #skillCards{
-    margin-left: 4.5rem;
-    margin-right: 4.5rem;    
+    @apply mx-18;
   }
 }
