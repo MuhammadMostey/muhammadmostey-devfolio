@@ -4,30 +4,31 @@
 
 @layer base {
 
+
   h1 {
-    @apply text-4xl mb-4;
+    @apply text-4xl mb-4 mx-2;
   }
 
   h2, h3 {
-    @apply mb-6 mt-12 text-2xl;
+    @apply mb-6 mt-12 text-2xl mx-2;
   }
 
   p {
-    @apply my-4 leading-relaxed;
+    @apply my-4 leading-relaxed mx-12;
   }
 
   h1 + h2 + p {
-    @apply first-letter:text-4xl first-letter:font-bold ;
+    @apply first-letter:text-4xl first-letter:font-bold mx-12;
   }
 
   h1 + p {
-    @apply first-letter:text-4xl first-letter:font-bold;
+    @apply first-letter:text-4xl first-letter:font-bold mx-12;
   }
 
   h1::before,
   h2::before,
   h3::before{
-    @apply mr-4 text-pink dark:text-yellow-300;
+    @apply mr-2 text-pink dark:text-yellow-300 ;
     content: "#";
   }  
 
@@ -37,7 +38,7 @@
 
 
   #blog-post-div {
-    @apply float-right w-1/2 ;
+    @apply float-right w-1/2 ml-4 mr-2;
   }
 
   #blog-post-div > ul{
@@ -49,11 +50,12 @@
   }
 
   pre {
-    @apply my-8 p-3 rounded-xl text-xl;
+    @apply my-8 p-3 rounded-xl text-xl mx-6 ;
   }
 
   p > code {
-    @apply px-2 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap;
+    @apply px-2 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap ;
   }
+
 
 }
