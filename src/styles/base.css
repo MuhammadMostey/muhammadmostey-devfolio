@@ -72,8 +72,13 @@
     @apply mx-18;
   }
   
+  #skillCards > div {
+    @apply py-1 text-xl; 
+
+  }
+
   .skillslist {
-    @apply py-0.25 ;
+    @apply py-0.25  text-lg;
   }
 
   #buttonblog{
