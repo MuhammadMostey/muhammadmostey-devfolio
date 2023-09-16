@@ -14,15 +14,15 @@
   }
 
   p {
-    @apply my-4 leading-relaxed mx-18; 
+    @apply my-4 leading-relaxed mx-18 text-xl; 
   }
 
   h1 + h2 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-18;
+    @apply first-letter:text-4xl first-letter:font-bold mx-18 text-xl;
   }
 
   h1 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-18;
+    @apply first-letter:text-4xl first-letter:font-bold mx-18 text-xl;
   }
 
   h1::before,
@@ -54,11 +54,11 @@
   }
 
   pre {
-    @apply my-6 p-3 rounded-xl text-xl mx-18;
+    @apply my-6 p-3 rounded-xl text-sm mx-18;
   }
 
   p > code {
-    @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap ;
+    @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-lg ;
   }
 
   .NavigationSocialBar{
