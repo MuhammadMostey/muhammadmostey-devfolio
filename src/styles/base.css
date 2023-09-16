@@ -18,11 +18,11 @@
   }
 
   h1 + h2 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-18 text-xl;
+    @apply first-letter:text-4xl  mx-18 text-xl;
   }
 
   h1 + p {
-    @apply first-letter:text-4xl first-letter:font-bold mx-18 text-xl;
+    @apply first-letter:text-4xl  mx-18 text-xl ;
   }
 
   h1::before,
