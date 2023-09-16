@@ -71,6 +71,10 @@
   #skillCards{
     @apply mx-18;
   }
+  
+  Card > div {
+    @apply py-0.5;
+  }
 
   #buttonblog{
     @apply mx-18;
