@@ -22,11 +22,10 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
                             {blogPostEntry.data.title}
                         </div>    
                     </a>
+
                     <div class="text-base px-2 pb-2">
                         {blogPostEntry.data.description}
                     </div>
-
-                    <div></div>
 
                 </div>
             ))
