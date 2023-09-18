@@ -8,18 +8,25 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
 
 <Layout title="Muhammad Mostey | Blog">
     <h1>Blog</h1>
-	<div class="grid grid-cols-4 gap-4 mb-8">
+	<div class="grid grid-cols-4 gap-4 mb-8" id="blogcards">
 
         {
             blogEnteries.map((blogPostEntry)=> (
                 <div class="border-2 border-dark dark:border-light rounded-xl p-2">
-                    <a href={`/blog/${blogPostEntry.slug}`}>
-                        
-                        <Image src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
-                        
+                    <a href={`/blog/${blogPostEntry.slug}`}> 
+                        <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
                     </a>
-                    <a href={`/blog/${blogPostEntry.slug}`}>{blogPostEntry.data.title}</a>
 
+                    <a href={`/blog/${blogPostEntry.slug}`}>
+                        <div class="px-2 py-4">
+                            {blogPostEntry.data.title}
+                        </div>    
+                    </a>
+                    <div class="text-base px-2 pb-2">
+                        {blogPostEntry.data.description}
+                    </div>
+
+                    <div></div>
 
                 </div>
             ))
