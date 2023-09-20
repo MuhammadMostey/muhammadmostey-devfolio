@@ -27,7 +27,10 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
                         {blogPostEntry.data.description}
                     </div>
 
-                    <div class="col bp-2 justify-start mt-2">
+                    
+                    
+
+                    <div class="col bp-2 justify-start mt-2 pointer-events-none">
 
                         <div class="row text-left scale">
                             <Image class="rounded-full float-left " src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author"/>
@@ -37,7 +40,7 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
                             <p class="text-sm m-0">{blogPostEntry.data.author}</p>
                             <p class="text-sm m-0" > {blogPostEntry.data.publishedDate} </p> 
                         </div>
-                    
+
                     </div>
 
                 </div>
