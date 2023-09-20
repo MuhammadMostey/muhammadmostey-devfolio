@@ -18,12 +18,12 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
                     </a>
 
                     <a href={`/blog/${blogPostEntry.slug}`}>
-                        <div class="px-2 py-4">
+                        <div class="px-2 py-2 text-base">
                             {blogPostEntry.data.title}
                         </div>    
                     </a>
 
-                    <div class="text-base px-2 pb-2">
+                    <div class="text-sm px-2 pb-2 blogcardtext">
                         {blogPostEntry.data.description}
                     </div>
 

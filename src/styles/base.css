@@ -141,4 +141,8 @@
   #buttonblog{
     
   }
+
+  .blogcardtext {
+    height: 5rem;
+  }
 }
