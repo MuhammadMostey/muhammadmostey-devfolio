@@ -6,10 +6,18 @@ import {sortByDate} from "../utils/sortByDate.js";
 
 const blogEnteries = await getCollection("blog", ({data}) => {return data.draft !== true;});
 
-function formatDateToDateString(dateString) {
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  return new Date(dateString).toLocaleDateString(undefined, options);
-}
+// function formatDateToDateString(dateString) {
+// //   const options = { year: numeric, month: long, day: numeric };
+//     const date = new Date(dateString)
+//     const year = date.getFullYear;
+//     const month = date.getMonth;
+//     const day = date.getDate;
+//     const fullDate = `${month}/${day}/${year}`;
+//     const fullDateString = fullDate.toString;
+
+//   return fullDateString;
+// //   .toLocaleDateString(undefined, options);
+// }
 ---
 
 <Layout title="Muhammad Mostey | Blog">
@@ -44,7 +52,7 @@ function formatDateToDateString(dateString) {
                         
                         <div class="row ml-12">
                             <p class="text-sm m-0">{blogPostEntry.data.author}</p>
-                            <p class="text-sm m-0" > {formatDateToDateString(blogPostEntry.data.publishedDate) } </p> 
+                            <p class="text-sm m-0" > {/*formatDateToDateString(*/blogPostEntry.data.publishedDate /*)*/ } </p> 
                         </div>
 
                     </div>
