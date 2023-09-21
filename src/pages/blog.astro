@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import {Image} from "astro:assets";
+import {sortByDate} from "../utils/sortByDate.js";
 
 const blogEnteries = await getCollection("blog", ({data}) => {return data.draft !== true;});
 ---
@@ -11,7 +12,7 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
 	<div class="grid grid-cols-4 gap-4 mb-8" id="blogcards">
 
         {
-            blogEnteries.map((blogPostEntry)=> (
+            blogEnteries.sort(sortByDate).map((blogPostEntry)=> (
                 <div class="border-2 border-dark dark:border-light rounded-xl p-2">
                     <a href={`/blog/${blogPostEntry.slug}`}> 
                         <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
