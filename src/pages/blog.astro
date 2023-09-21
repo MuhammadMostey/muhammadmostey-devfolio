@@ -5,6 +5,11 @@ import {Image} from "astro:assets";
 import {sortByDate} from "../utils/sortByDate.js";
 
 const blogEnteries = await getCollection("blog", ({data}) => {return data.draft !== true;});
+
+function formatDateToDateString(dateString) {
+  const options = { year: 'numeric', month: 'long', day: 'numeric' };
+  return new Date(dateString).toLocaleDateString(undefined, options);
+}
 ---
 
 <Layout title="Muhammad Mostey | Blog">
@@ -39,7 +44,7 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
                         
                         <div class="row ml-12">
                             <p class="text-sm m-0">{blogPostEntry.data.author}</p>
-                            <p class="text-sm m-0" > {blogPostEntry.data.publishedDate} </p> 
+                            <p class="text-sm m-0" > {formatDateToDateString(blogPostEntry.data.publishedDate) } </p> 
                         </div>
 
                     </div>
