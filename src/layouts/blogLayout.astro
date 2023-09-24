@@ -1,0 +1,83 @@
+---
+import NavigationLinks from '../components/NavigationLinks.astro';
+import NavigationSocialBar from '../components/NavigationSocialBar.astro';
+
+
+let { title, description } = Astro.props.frontmatter;
+
+const websiteDevelopedYear = '2023'
+
+function copyrightDate(websiteDevelopedYear){
+	const currentYearObject = new Date();
+	const currentYear = currentYearObject.getFullYear().toString();
+	const currentYearInt = parseInt(currentYear);
+	const websiteDevelopedYearInt = parseInt(websiteDevelopedYear);
+
+	// returns currnet year if the same as developed at, otherwise return the year developed at to the current year, used for copyright.
+	if (currentYearInt == websiteDevelopedYearInt){
+		return `${websiteDevelopedYearInt}`
+	} else {
+		return `${websiteDevelopedYearInt} - ${currentYearInt}`
+	}
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{`Blog | ${title}`}</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<!-- <link rel="icon" type="image/svg+xml" href="../../public/favicon.svg"/> -->
+	</head>
+
+	
+	<body class="font-mono bg-light dark:bg-dark text-dark  dark:text-light">
+
+
+		<main class="md:container md:mx-auto w-full min-h-screen">
+			
+			
+			<header class="flex justify-between items-center mx-8 py-8 font-medium">
+				
+				<nav class="flex justify-center items-center gap-x-6 text-2xl NavigationLinks">
+					<NavigationLinks />
+				</nav>
+				
+
+				<nav class="flex justify-center items-center gap-x-4 NavigationSocialBar"> 
+					<NavigationSocialBar />
+				</nav>
+
+			</header>
+
+
+			<article class="text-2xl mx-20 px-2 py-8 ">
+				<slot />
+			</article>
+
+
+			<footer>
+				<div class="text-center">
+					Copyright © {copyrightDate(websiteDevelopedYear)} Muhammad Mostey </div>
+			</footer>
+
+
+		</main>
+		
+		<script src="../js/app.js"></script>
+	</body>
+</html>
+
+<style is:global>
+	@import "../styles/base.css";
+</style>
