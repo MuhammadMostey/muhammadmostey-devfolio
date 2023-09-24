@@ -8,6 +8,23 @@ export interface Props {
 }
 
 const { title, description } = Astro.props;
+
+const websiteDevelopedYear = '2023'
+
+function copyrightDate(websiteDevelopedYear){
+	const currentYearObject = new Date();
+	const currentYear = currentYearObject.getFullYear().toString();
+	const currentYearInt = parseInt(currentYear);
+	const websiteDevelopedYearInt = parseInt(websiteDevelopedYear);
+
+	// returns currnet year if the same as developed at, otherwise return the year developed at to the current year, used for copyright.
+	if (currentYearInt == websiteDevelopedYearInt){
+		return `${websiteDevelopedYearInt}`
+	} else {
+		return `${websiteDevelopedYearInt} - ${currentYearInt}`
+	}
+}
+
 ---
 
 <!DOCTYPE html>
@@ -54,7 +71,14 @@ const { title, description } = Astro.props;
 
 
 			<footer>
-				<div class="text-center">Copyright © 2023 Muhammad Mostey </div>
+				<div class="text-center">
+					Copyright © 
+					{
+						copyrightDate(websiteDevelopedYear)
+					}
+					
+					
+					Muhammad Mostey </div>
 			</footer>
 
 
