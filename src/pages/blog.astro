@@ -8,12 +8,8 @@ const blogEnteries = await getCollection("blog", ({data}) => {return data.draft 
 
 
 function formatDateToDateString(dateString) {
-
-    
-//   const options = { year: numeric, month: long, day: numeric };
     const blogDateObject = new Date(dateString);
     const blogDateString = blogDateObject.toDateString();
-
     return blogDateString
 }
 ---
