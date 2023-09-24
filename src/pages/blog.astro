@@ -19,7 +19,7 @@ function formatDateToDateString(dateString) {
 	<div class="grid grid-cols-4 gap-4 mb-8" id="blogcards">
 
         {
-            blogEnteries.sort(sortByDate).slice(0, 4).map((blogPostEntry)=> (
+            blogEnteries.sort(sortByDate).slice(0, 3).map((blogPostEntry)=> (
                 <div class="border-2 border-dark dark:border-light rounded-xl p-2">
                     <a href={`/blog/${blogPostEntry.slug}`}> 
                         <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
