@@ -3,7 +3,7 @@ import NavigationLinks from '../components/NavigationLinks.astro';
 import NavigationSocialBar from '../components/NavigationSocialBar.astro';
 
 
-let { title, description } = Astro.props.frontmatter;
+let { title, description, keywords, author } = Astro.props.frontmatter;
 
 const websiteDevelopedYear = '2023'
 
@@ -29,6 +29,8 @@ function copyrightDate(websiteDevelopedYear){
 		<title>{`Blog | ${title}`}</title>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords}/>
+		<meta name="author" content={author} />
 		<meta name="viewport" content="width=device-width" />
 		
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
