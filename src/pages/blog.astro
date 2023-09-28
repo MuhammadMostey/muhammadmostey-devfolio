@@ -22,7 +22,8 @@ function formatDateToDateString(dateString) {
             // .slice(0, 4)
             blogEnteries.sort(sortByDate).slice(0, 4).map((blogPostEntry)=> (
                 <div class="border-2 border-dark dark:border-light rounded-xl p-2">
-                    <a href={`/blog/${blogPostEntry.slug}`}> 
+                    
+                    <a href={`/blog/${blogPostEntry.slug}`} > 
                         <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
                     </a>
 
@@ -37,7 +38,7 @@ function formatDateToDateString(dateString) {
                     </div>
 
                     
-                    <div class="col bp-2 justify-start mt-2 pointer-events-none">
+                    <div class="col pb-2 justify-start mt-2 pointer-events-none">
 
                         <div class="row text-left scale">
                             <Image class="rounded-full float-left " src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author"/>
