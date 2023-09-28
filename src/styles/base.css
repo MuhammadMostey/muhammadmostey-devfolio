@@ -120,11 +120,11 @@
   }
 
   .NavigationSocialBar{
-    @apply mr-6;
+    @apply md:mr-6;
   }
   
   .NavigationLinks{
-    @apply ml-4;
+    @apply md:ml-4;
   }
 
 
