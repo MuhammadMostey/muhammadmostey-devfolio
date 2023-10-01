@@ -9,24 +9,25 @@ import Button from '../components/Button.astro';
 <Layout title="Muhammad Mostey | Home" description="Muhammad Mostafa Mostey's Personal Portfolio Website">
 
 
-    <div class="flex flex-row justify-between items-center">
+    <div class="flex flex-col xl:flex-row justify-between items-center">
         
 
-        <div class=" w-1/2 flex justify-center items-center px-6">
+        <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6">
             <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
         </div>
         
 
-        <div class="w-1/2 flex flex-col justify-between items-center ">
+        <div class=" w-full xl:w-1/2 flex flex-col justify-between items-center ">
             
             <!-- <div class=" flex justify-center text-4xl mb-2  "> -->
-            <div class="text-center text-6xl mb-2  font-medium ">
+            <div class="text-center text-4xl md:text-6xl mb-2 font-medium  ">
                 
-                Muhammad M. Mostey <br /> 
+                <span class="">Muhammad M. Mostey</span> <br /> 
+            
                 <!-- <span class="text-5xl font-normal">Full Stack </span> <span class="font-normal text-5xl text-green-600 dark:text-green-400 ">Developer</span> -->
-                <div class="text-5xl">
+                <div class="text-2xl md:text-5xl">
                     <!-- <span class="text-5xl" >-/></span> -->
-                    <span id="dynamic-header-text" class="text-5xl font-normal text-pink dark:text-yellow-300">Full Stack Developer</span>
+                    <span id="dynamic-header-text" class="font-normal text-pink dark:text-yellow-300">Full Stack Developer</span>
                 </div>
                 
                 
@@ -35,10 +36,10 @@ import Button from '../components/Button.astro';
                 <!-- <span class=" "> Full Stack Developer </span>  -->
             </div>
             
-            <div class="mb-6 leading-relaxed "> 
+            <div class="mb-4 md:mb-6 leading-relaxed text-center xl:text-start "> 
             
                 Bringing visions to life with code and <span class="text-pink dark:text-yellow-300"> technology. </span> 
-                 <br />
+                 
 
                 <!-- Du wolltest schon immer wissen wie du eine Website programmierst? Ich
                 zeige dir in zahlreichen Tutorials wie du das mit HTML, CSS und
@@ -46,14 +47,14 @@ import Button from '../components/Button.astro';
             </div>
 
             <div class="flex flex-row justify-between items-center ">
-                <Button  url={resume} external={true} title="Resume" css="mx-2" />
-                <Button  url="#"  title="Projects" direction="down" css="ml-4 mx-2" />
+                <Button  url={resume} external={true} title="Resume" css=" mx-1 md:mx-2" />
+                <Button  url="#"  title="Projects" direction="down" css=" md:ml-4 md:mx-2 " />
+            </div>
 
-                <a href="mailto:muhammadmostey@gmail.com" class="ml-4  text-dark dark:text-light underline font-semibold">
+            <div class="flex flex-col items-center my-2">
+                <a href="mailto:muhammadmostey@gmail.com" class="ml-4 text-dark dark:text-light underline font-semibold">
                     Contact
                 </a>
-            
-
             </div>
 
         </div>
