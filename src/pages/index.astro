@@ -12,19 +12,19 @@ import Button from '../components/Button.astro';
     <div class="flex flex-col xl:flex-row justify-between items-center ">
         
         <!-- Part 1 of the first homepage section (Image) -->
-        <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6">
+        <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6 mb-4 xl:mb-0">
             <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
         </div>
         
         <!-- Part 2 of the first homepage section (Headline, subheading, buttons) -->
         <div class=" w-full xl:w-1/2 flex flex-col justify-between items-center ">
             <!-- Headline -->
-            <div class="text-center text-2xl md:text-6xl mb-4 font-medium  ">
+            <div class="text-center text-2xl md:text-6xl sm:mb-4 mb-6 font-medium  ">
                 
                 <span class="">Muhammad M. Mostey</span> <br /> 
             
                 <!-- <span class="text-5xl font-normal">Full Stack </span> <span class="font-normal text-5xl text-green-600 dark:text-green-400 ">Developer</span> -->
-                <div class="text-2xl md:text-5xl">
+                <div class="sm:mt-4 mt-6 text-2xl md:text-5xl">
                     <!-- <span class="text-5xl" >-/></span> -->
                     <span id="dynamic-header-text" class="font-normal text-pink dark:text-yellow-300">Full Stack Developer</span>
                 </div>
@@ -34,7 +34,7 @@ import Button from '../components/Button.astro';
             </div>
 
             <!-- Headline subheading -->
-            <div class="mb-4 md:mb-6 leading-relaxed text-center xl:text-start "> 
+            <div class="mt-0 mb-4 md:mb-6 leading-relaxed text-center xl:text-start "> 
             
                 Bringing visions to life with code and <span class="text-pink dark:text-yellow-300"> technology. </span> 
                  
