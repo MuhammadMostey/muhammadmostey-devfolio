@@ -8,19 +8,18 @@ import Button from '../components/Button.astro';
 
 <Layout title="Muhammad Mostey | Home" description="Muhammad Mostafa Mostey's Personal Portfolio Website">
 
-
-    <div class="flex flex-col xl:flex-row justify-between items-center">
+    <!-- Section 1 in the homeoage -->
+    <div class="flex flex-col xl:flex-row justify-between items-center ">
         
-
+        <!-- Part 1 of the first homepage section (Image) -->
         <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6">
             <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
         </div>
         
-
+        <!-- Part 2 of the first homepage section (Headline, subheading, buttons) -->
         <div class=" w-full xl:w-1/2 flex flex-col justify-between items-center ">
-            
-            <!-- <div class=" flex justify-center text-4xl mb-2  "> -->
-            <div class="text-center text-2xl md:text-6xl sm: mb-4 font-medium  ">
+            <!-- Headline -->
+            <div class="text-center text-2xl md:text-6xl mb-4 font-medium  ">
                 
                 <span class="">Muhammad M. Mostey</span> <br /> 
             
@@ -33,7 +32,8 @@ import Button from '../components/Button.astro';
                 <!-- <span class="flex justify-center text-6xl mb-2"> Muhammad  Mostey </span>  -->
                 <!-- <span class=" "> Full Stack Developer </span>  -->
             </div>
-            
+
+            <!-- Headline subheading -->
             <div class="mb-4 md:mb-6 leading-relaxed text-center xl:text-start "> 
             
                 Bringing visions to life with code and <span class="text-pink dark:text-yellow-300"> technology. </span> 
@@ -56,7 +56,6 @@ import Button from '../components/Button.astro';
             </div>
 
         </div>
-
 
     </div>
 
