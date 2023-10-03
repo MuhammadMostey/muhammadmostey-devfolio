@@ -67,7 +67,7 @@
   }
 
   p {
-    @apply my-4 leading-relaxed   text-xl; 
+    @apply my-4 leading-relaxed  text-xl; 
   }
 
   h1 + h2 + p {
@@ -119,6 +119,7 @@
     @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-xl ;
   }
 
+  /* check here */
   .NavigationSocialBar{
     @apply md:mr-6;
   }
