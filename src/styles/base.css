@@ -67,15 +67,15 @@
   }
 
   p {
-    @apply my-4 leading-relaxed  text-xl; 
+    @apply my-4 leading-relaxed text-lg md:text-xl; 
   }
 
   h1 + h2 + p {
-    @apply first-letter:text-3xl first-letter:font-bold;
+    @apply md:first-letter:text-3xl first-letter:text-2xl first-letter:font-bold;
   }
 
   h1 + p {
-    @apply first-letter:text-3xl first-letter:font-bold;
+    @apply md:first-letter:text-3xl first-letter:text-2xl first-letter:font-bold;
   }
 
   h1::before,
@@ -116,7 +116,7 @@
   }
 
   p > code {
-    @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-xl ;
+    @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-lg md:text-xl ;
   }
 
   /* check here */
