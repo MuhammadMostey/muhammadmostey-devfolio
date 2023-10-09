@@ -91,7 +91,7 @@
 
 
   #blog-post-div {
-    @apply float-right w-1/2 ml-4 ;
+    @apply lg:float-right lg:w-1/2 lg:ml-4 ;
   }
 
   #blog-post-div > img{
