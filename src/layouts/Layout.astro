@@ -1,6 +1,6 @@
 ---
 import Header from '../components/Header.astro';
-
+import NavigationMobile from '../components/NavigationMobile.astro';
 
 let { title, description } = Astro.props;
 
@@ -57,6 +57,8 @@ function copyrightDate(websiteDevelopedYear){
 				<div class="text-center mt-10 md:mt-0">
 					Copyright © {copyrightDate(websiteDevelopedYear)} Muhammad Mostey </div>
 			</footer>
+
+			<NavigationMobile />
 
 
 		</main>
