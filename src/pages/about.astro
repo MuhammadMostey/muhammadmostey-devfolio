@@ -1,41 +1,103 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import {Icon} from 'astro-icon';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { Icon } from "astro-icon";
 ---
 
 <Layout title="Muhammad Mostey | About">
-    
+    <h1 id="who-am-i">Who am I?</h1>
 
-    <h1 id="who-am-i" >Who am I?</h1>
-    
     <!-- Summary -->
     <h2 class="mt-6 mb-6">Summary</h2>
-    <p>Self-taught individual currently pursuing a <span class="key-information">Bachelor's degree in Computer Science</span> with the University of the People. 
-        My fervor and enthusiasm lie in the realms of Programming, Artificial Intelligence, Software and Web Development, Robotics, Self-driving Cars, as well as the latest advancements 
-        in Technology and Computer Sciences at large.
-    </p>
-    
-    <p>Experienced with more than 8 years working with Humanitarian NGOs, Private Firms, and Agencies across different countries. Worked in several sectors such as 
-        <span class="key-information">Financial Accounting, Information Technology, Administration, and Customer Service.</span>
+    <p>
+        Self-taught individual currently pursuing a <span
+            class="key-information">Bachelor's degree in Computer Science</span
+        > with the University of the People. My fervor and enthusiasm lie in the
+        realms of Programming, Artificial Intelligence, Software and Web
+        Development, Robotics, Self-driving Cars, as well as the latest
+        advancements in Technology and Computer Sciences at large.
     </p>
 
-    
+    <p>
+        Experienced with more than 8 years working with Humanitarian NGOs,
+        Private Firms, and Agencies across different countries. Worked in
+        several sectors such as
+        <span class="key-information"
+            >Financial Accounting, Information Technology, Administration, and
+            Customer Service.</span
+        >
+    </p>
+
     <!-- Skills Section-->
-    <h2 id="skills" class=" ">Skills</h2>
+    <h2 id="skills" class="">Skills</h2>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-2 sm:my-6 gap-4 " id="skillCards">
-    
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-2 sm:my-6 gap-4"
+        id="skillCards"
+    >
         <Card id="skillCard">
             <span slot="title">Programming Languages</span>
             <div class="skillslist">
-                <div> <img src="https://img.shields.io/badge/-Java-05122A?style=flat&logo=Java&logoColor=FFA518" class="inline text-center">
-                    Java</div>
+                <div>Java</div>
                 <div>Python</div>
                 <div>Javascript</div>
-                <div> <Icon name="logos:c-plusplus" width="32" height="32" class="inline" /> C++</div>
+                <div>C++</div>
                 <div>PHP</div>
                 <div>R</div>
+                <div
+                    class="border-2 dark:border-light border-dark items-center py-1 rounded-lg"
+                >
+                    <!-- <img
+                        src="https://img.shields.io/badge/-Java-05122A?style=flat&logo=Java&logoColor=FFA518"
+                        class="inline text-center"
+                    /> -->
+
+                    <!-- https://icon-sets.iconify.design/skill-icons/ -->
+
+                    <Icon
+                        name="java-light"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    />
+                    <Icon
+                        name="python-light"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    />
+                    <Icon
+                        name="javascript"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    />
+
+                    <Icon
+                        name="cpp"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    />
+                    <!-- <Icon
+                        name="python-light"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    /> -->
+                    <!-- <Icon
+                        name="python-light"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    /> -->
+                    <!-- <Icon
+                        name="python-light"
+                        width="32"
+                        height="32"
+                        class="inline mx-1"
+                    /> -->
+                </div>
             </div>
         </Card>
 
@@ -110,9 +172,5 @@ import {Icon} from 'astro-icon';
                 <div>Turkish</div>
             </div>
         </Card>
-
-
     </div>
-
-	
 </Layout>
