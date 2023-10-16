@@ -136,7 +136,7 @@
 
   
   .skillslist {
-    @apply py-0.25  text-lg md:text-xl;
+    @apply py-0.25  text-lg md:text-xl grid md:grid-rows-1 grid-rows-1 justify-center text-center;
   }
 
   #buttonblog{
@@ -145,5 +145,13 @@
 
   .blogcardtext {
     height: 5rem;
+  }
+  .skillslist > div {
+    @apply  mr-1  text-center justify-center mb-1 ;
+
+  }
+  .skillslist > Icon {
+    @apply grid grid-cols-2 text-center;
+
   }
 }
