@@ -116,7 +116,7 @@
   }
 
   p > code {
-    @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-lg md:text-xl ;
+    @apply px-2 py-0.5 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-lg md:text-xl ;
   }
 
   /* check here */
