@@ -128,7 +128,12 @@
     @apply md:ml-4;
   } */
 
-
+  .index-main-image{
+    border: none;
+    border-radius: 3rem;
+    mix-blend-mode:normal;
+    @apply bg-blend-lighten dark:mix-blend-lighten mix-blend-darken;
+  }
   
   #skillCards > div {
     @apply py-1 text-xl md:text-2xl; 

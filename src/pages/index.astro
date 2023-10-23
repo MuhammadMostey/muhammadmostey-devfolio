@@ -1,6 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import devguy from '../assets/images/developer-guy.png';
+import devguyb from '../assets/images/dev-guy-b.png';
+import devguyf from '../assets/images/dev-guy-f.png';
+import devguyr from '../assets/images/dev-guy-r.png';
 import resume from '../assets/documents/Resume - Muhammad Mostey.pdf';
 import { Image } from 'astro:assets';
 import Button from '../components/Button.astro';
@@ -9,11 +12,11 @@ import Button from '../components/Button.astro';
 <Layout title="Muhammad Mostey | Home" description="Muhammad Mostafa Mostey's Personal Portfolio Website">
 
     <!-- Section 1 in the homeoage -->
-    <div class="flex flex-col xl:flex-row justify-between items-center ">
+    <div class="flex flex-col xl:flex-row justify-between items-center">
         
         <!-- Part 1 of the first homepage section (Image) -->
-        <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6 mb-4 xl:mb-0">
-            <Image src={devguy} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp"/>
+        <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6 mb-4 xl:mb-0 ">
+            <Image src={devguyr} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp" class="index-main-image"/>
         </div>
         
         <!-- Part 2 of the first homepage section (Headline, subheading, buttons) -->
