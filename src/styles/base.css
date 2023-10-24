@@ -159,4 +159,16 @@
     @apply grid grid-cols-2 text-center;
 
   }
+
+  /* Define a transition duration during page visits */
+  .transition-fade{
+    transition: opacity 0.25s;
+    opacity: 1;
+  }
+
+  /* Define the styles for the unloaded pages */
+  html.is-animating .transition-fade {
+    
+    opacity: 0;
+  }
 }
