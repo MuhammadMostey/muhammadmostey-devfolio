@@ -1,7 +1,6 @@
 import Swup from 'swup';
 import SwupA11yPlugin from '@swup/a11y-plugin';
 import SwupHeadPlugin from '@swup/head-plugin';
-import SwupPreloadPlugin from '@swup/preload-plugin';
 import SwupScrollPlugin from '@swup/scroll-plugin';
 
 
@@ -123,3 +122,7 @@ const init = () => {
 
 // calls the init function once the DOMContentLoaded is loaded
 document.addEventListener("DOMContentLoaded", () => init());
+
+const swup = new Swup({
+  plugins: [new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupScrollPlugin() ],
+});
