@@ -162,7 +162,7 @@
 
   /* Define a transition duration during page visits */
   .transition-fade{
-    transition: opacity 0.25s;
+    transition: opacity 0.4s;
     opacity: 1;
   }
 
