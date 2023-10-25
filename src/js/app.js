@@ -126,3 +126,5 @@ document.addEventListener("DOMContentLoaded", () => init());
 const swup = new Swup({
   plugins: [new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupScrollPlugin() ],
 });
+
+swup.hooks.on("content:replace", init);
