@@ -161,14 +161,14 @@
   }
 
   /* Define a transition duration during page visits */
-  .transition-fade{
+  .swuptransition-fade{
     transition: opacity 0.4s;
     opacity: 1;
     transform: none;
   }
 
   /* Define the styles for the unloaded pages */
-  html.is-animating .transition-fade {
+  html.is-animating .swuptransition-fade {
     opacity: 0;
     transform: translateY(20px);
   }
