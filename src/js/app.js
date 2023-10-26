@@ -39,11 +39,11 @@ class PageHandler {
         
         if(localStorage.getItem("theme") == "dark"){
             colorSwitch.innerHTML = `
-                <img src="/icons/sun.svg" alt="sun" class="w-5 h-5" />
+                <img src="/icons/sun.svg?a=${Math.random()}" alt="sun" class="w-5 h-5" />
             `
         } else{
             colorSwitch.innerHTML =`
-                <img src="/icons/moon.svg" alt="moon" class=" w-5 h-5" />
+                <img src="/icons/moon.svg?a=${Math.random()}" alt="moon" class=" w-5 h-5" />
             `
         }
 
