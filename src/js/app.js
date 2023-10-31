@@ -1,3 +1,10 @@
+import Swup from 'swup';
+import SwupA11yPlugin from '@swup/a11y-plugin';
+import SwupHeadPlugin from '@swup/head-plugin';
+import SwupScrollPlugin from '@swup/scroll-plugin';
+
+
+
 class PageHandler {
     
     // constructor function
@@ -32,11 +39,11 @@ class PageHandler {
         
         if(localStorage.getItem("theme") == "dark"){
             colorSwitch.innerHTML = `
-                <img src="/icons/sun.svg" alt="sun" class="w-5 h-5" />
+                <img src="/icons/sun.svg?a=${Math.random()}" alt="sun" class="w-5 h-5" />
             `
         } else{
             colorSwitch.innerHTML =`
-                <img src="/icons/moon.svg" alt="moon" class=" w-5 h-5" />
+                <img src="/icons/moon.svg?a=${Math.random()}" alt="moon" class=" w-5 h-5" />
             `
         }
 
@@ -115,3 +122,10 @@ const init = () => {
 
 // calls the init function once the DOMContentLoaded is loaded
 document.addEventListener("DOMContentLoaded", () => init());
+
+const swup = new Swup({
+  animationSelector: '[class*="swuptransition-"]',
+  plugins: [new SwupA11yPlugin(), new SwupHeadPlugin(), new SwupScrollPlugin() ],
+});
+
+swup.hooks.on("content:replace", init);

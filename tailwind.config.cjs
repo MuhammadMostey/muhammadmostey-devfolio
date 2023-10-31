@@ -12,6 +12,11 @@ module.exports = {
 				orange: "#FFAC41", 
 				pink: "#FF1E56",
 			},
+			spacing: {
+				'18' : '4.5rem',
+				'20' : '5rem',
+				'0.25': '0.0625rem',
+			},
 		},
 	},
 	plugins: [],

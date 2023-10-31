@@ -1,0 +1,81 @@
+---
+import Header from '../components/Header.astro';
+import NavigationMobile from '../components/NavigationMobile.astro';
+
+let { title, description, keywords, author } = Astro.props.frontmatter;
+
+const websiteDevelopedYear = '2023'
+
+function copyrightDate(websiteDevelopedYear){
+	const currentYearObject = new Date();
+	const currentYear = currentYearObject.getFullYear().toString();
+	const currentYearInt = parseInt(currentYear);
+	const websiteDevelopedYearInt = parseInt(websiteDevelopedYear);
+
+	// returns currnet year if the same as developed at, otherwise return the year developed at to the current year, used for copyright.
+	if (currentYearInt == websiteDevelopedYearInt){
+		return `${websiteDevelopedYearInt}`
+	} else {
+		return `${websiteDevelopedYearInt} - ${currentYearInt}`
+	}
+}
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>{`Blog | ${title}`}</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords}/>
+		<meta name="author" content={author} />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
+		<!-- <link rel="icon" type="image/svg+xml" href="../../public/favicon.svg"/> -->
+	</head>
+
+	
+	<body class="font-mono bg-light dark:bg-dark text-dark  dark:text-light">
+
+
+		<main id ="swup" class="relative md:container md:mx-auto w-full min-h-screen ">
+			
+			<Header />
+
+
+			<article class="text-lg md:text-2xl mx-2 sm:mx-4 md:mx-6 px-2 py-8 swuptransition-fade">
+				<slot />
+			</article>
+
+
+			<footer>
+				<div class="text-center mt-10 md:mt-0">
+					Copyright © {copyrightDate(websiteDevelopedYear)} Muhammad Mostey </div>
+			</footer>
+
+
+			<NavigationMobile />
+
+
+		</main>
+		
+
+		<script src="../js/app.js"></script>
+
+
+	</body>
+
+</html>
+
+
+<style is:global>
+	@import "../styles/base.css";
+</style>

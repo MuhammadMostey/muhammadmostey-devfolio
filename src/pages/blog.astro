@@ -1,8 +1,60 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import {Image} from "astro:assets";
+import {sortByDate} from "../utils/sortByDate.js";
+
+const blogEnteries = await getCollection("blog", ({data}) => {return data.draft !== true;});
+
+
+function formatDateToDateString(dateString) {
+    const blogDateObject = new Date(dateString);
+    const blogDateString = blogDateObject.toDateString();
+    return blogDateString
+}
 ---
 
 <Layout title="Muhammad Mostey | Blog">
-    <h1>blog</h1>
-	
+    <h1>Blog</h1>
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" id="blogcards">
+
+        {
+            // .slice(0, 4)
+            blogEnteries.sort(sortByDate).slice(0, 4).map((blogPostEntry)=> (
+                <div class="border-2 border-dark dark:border-light rounded-xl p-2">
+                    
+                    <a href={`/blog/${blogPostEntry.slug}`} > 
+                        <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
+                    </a>
+
+                    <a href={`/blog/${blogPostEntry.slug}`}>
+                        <div class="px-2 py-2 text-base">
+                            {blogPostEntry.data.title}
+                        </div>    
+                    </a>
+
+                    <div class="text-sm px-2 pb-2 blogcardtext">
+                        {blogPostEntry.data.description}
+                    </div>
+
+                    
+                    <div class="col pb-2 justify-start mt-2 pointer-events-none">
+
+                        <div class="row text-left scale">
+                            <Image class="rounded-full float-left " src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author"/>
+                        </div>
+                        
+                        <div class="row ml-12">
+                            <p class="text-sm m-0">{blogPostEntry.data.author}</p>
+                            <p class="text-sm m-0" > { formatDateToDateString(blogPostEntry.data.publishedDate) } </p> 
+                            
+                            
+                        </div>
+
+                    </div>
+
+                </div>
+            ))
+        }
+    </div>
 </Layout>

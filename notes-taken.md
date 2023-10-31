@@ -1,4 +1,4 @@
-
+#NOTES
 
 
 
@@ -81,6 +81,8 @@ export interface props {
 * style key-information class to be more obvious than other text all are in span.
 
 * check if 2 buttons in the main page are the same size.
+* to check the skill list in about page text size.
+* try to add the skills in the way like github profile
 
 
 
