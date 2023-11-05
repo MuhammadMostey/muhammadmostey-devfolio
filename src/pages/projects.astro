@@ -1,13 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import {Image} from "astro:assets";
+import {sortByDate} from "../utils/sortByDate.js";
+import ProjButton from '../components/ProjButton.astro';
+import Icon from 'astro-icon';
+
+
+
+function formatDateToDateString(dateString) {
+    const blogDateObject = new Date(dateString);
+    const blogDateString = blogDateObject.toDateString();
+    return blogDateString
+}
 ---
 
 <Layout title="Muhammad Mostey | Projects">
-    <h1>My Projects</h1>
-    <!-- <p>
+    <h1>Projects</h1>
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" id="blogcards">
 
-        <a href="">VS code</a>
+                <div class="border-2 border-dark dark:border-light rounded-xl p-2 flex flex-col">
 
-    </p> -->
-    
+                    <div class="flex blogcardheader">
+                        <a href="#" > 
+                            
+                            <Image id="blogcards-image" src={"/images/projects/devfolio.png"} width={600} height={450} quality={80} alt="" format="webp"/>
+                        </a>
+                    </div>
+                    
+
+                    <div class="blogcardbody flex-row">
+                        <a href="#">
+                            <div class="py-2 text-base dark:text-yellow-300 text-pink">
+                                Devfolio website
+                            </div>    
+                        </a>
+
+                        <div class="text-sm pb-2 blogcardtext">
+                            des
+                        </div>
+                        
+                    </div>
+
+                    <div class="flex flex-row justify-between items-center ">
+                        <ProjButton title="live"  url="#" live={true}  css=" m-0 p-0 text-sm " />
+                        <ProjButton title="Code" url="#"  live={false}  css=" md:ml-4 md:mx-2 mx-2" />
+                    </div>
+
+                    
+                    <!-- <div class="blogcardfooter">
+                        <div class="blogcardpublisher">
+                            <Image class="rounded-full float-left " src="../../public/images/projects/" width={40} height={40} quality={80} format="webp" alt="author"/>
+                        </div>
+                        <div class=" blogcardpublisher">
+                            <p class="text-sm m-0">Muha</p>
+                            <p class="text-sm m-0" > 12/may </p> 
+                        
+                        </div>
+                    </div> -->
+
+                    
+                </div>
+    </div>
 </Layout>

@@ -1,0 +1,33 @@
+---
+const {url, live, direction, title, css} = Astro.props;
+import {Icon} from "astro-icon";
+
+
+export interface Props {
+  url: string;
+  live ? : boolean;
+  direction ? : string;
+  title : string;
+  css ? : string;
+}
+
+---
+
+
+<p class="m-0">
+    <a
+      href={url}
+      target={live ? "_blank" : undefined}
+      rel = {live ? "noopener noreferrer" : undefined}
+      class={`inline-flex items-center rounded-lg border-1 border-solid  
+            bg-dark text-light p-1 px-1 md:py-1 md:px-1 font-semibold hover:border-dark hover:bg-transparent hover:text-dark 
+            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light 
+            ${css}`}
+    >
+      <span>{title}</span>
+
+      {live ? (<Icon name="ph:arrow-square-out" width="16" height="16" class="ml-2" />) : (<Icon name="source-code" width="16" height="16" class="ml-2" />)}
+      {direction === "down" ? (<Icon name="ph:arrow-square-down" width="24" height="24" class="ml-2" />) : ("")}
+
+    </a>
+  </p>
