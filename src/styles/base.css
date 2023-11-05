@@ -172,4 +172,14 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
+  .blogcardpublisher{
+    /* width: 10%; */
+    grid-template-columns: 0.25fr;
+  }
+
+  .blogcardfooter{
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+  }
 }
