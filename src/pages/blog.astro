@@ -21,38 +21,42 @@ function formatDateToDateString(dateString) {
         {
             // .slice(0, 4)
             blogEnteries.sort(sortByDate).map((blogPostEntry)=> (
-                <div class="border-2 border-dark dark:border-light rounded-xl p-2">
-                    
-                    <a href={`/blog/${blogPostEntry.slug}`} > 
-                        <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
-                    </a>
 
-                    <a href={`/blog/${blogPostEntry.slug}`}>
-                        <div class="px-2 py-2 text-base">
-                            {blogPostEntry.data.title}
-                        </div>    
-                    </a>
+                <div class="border-2 border-dark dark:border-light rounded-xl p-2 flex flex-col">
 
-                    <div class="text-sm px-2 pb-2 blogcardtext">
-                        {blogPostEntry.data.description}
+                    <div class="flex blogcardheader">
+                        <a href={`/blog/${blogPostEntry.slug}`} > 
+                            <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
+                        </a>
                     </div>
-
                     
-                    <div class="col pb-2 justify-start mt-2 pointer-events-none">
 
-                        <div class="row text-left scale">
-                            <Image class="rounded-full float-left " src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author"/>
+                    <div class="blogcardbody flex-row">
+                        <a href={`/blog/${blogPostEntry.slug}`}>
+                            <div class="py-2 text-base dark:text-yellow-300 text-pink">
+                                {blogPostEntry.data.title}
+                            </div>    
+                        </a>
+
+                        <div class="text-sm pb-2 blogcardtext">
+                            {blogPostEntry.data.description}
                         </div>
                         
-                        <div class="row ml-12">
-                            <p class="text-sm m-0">{blogPostEntry.data.author}</p>
-                            <p class="text-sm m-0" > { formatDateToDateString(blogPostEntry.data.publishedDate) } </p> 
-                            
-                            
-                        </div>
-
                     </div>
 
+                    
+                    <div class=" blogcardfooter">
+                        <div class="blogcardpublisher ">
+                            <Image class="rounded-full float-left " src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author"/>
+                        </div>
+                        <div class=" blogcardpublisher">
+                            <p class="text-sm m-0">{blogPostEntry.data.author}</p>
+                            <p class="text-sm m-0" > { formatDateToDateString(blogPostEntry.data.publishedDate) } </p> 
+                        
+                        </div>
+                    </div>
+
+                    
                 </div>
             ))
         }

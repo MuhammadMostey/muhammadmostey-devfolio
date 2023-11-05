@@ -4,52 +4,6 @@
 
 @layer base {
 
-  /*  h1 {
-    @apply text-4xl mb-4 mx-8;
-  }
-
-  h2, h3 {
-    @apply mb-2 mt-12 text-2xl mx-8;
-  }
-
-  p {
-    @apply my-4 leading-relaxed mx-18 text-xl; 
-  }
-
-  h1 + h2 + p {
-    @apply first-letter:text-4xl  mx-18 text-xl;
-  }
-
-  h1 + p {
-    @apply first-letter:text-4xl  mx-18 text-xl ;
-  }
-
-  h1::before,
-  h2::before,
-  h3::before{
-    @apply mr-2 text-pink dark:text-yellow-300 ;
-    content: "#";
-  }   
-  
-  pre {
-    @apply my-6 p-3 rounded-xl text-sm mx-18;
-  }
-
-  p > code {
-    @apply px-2 py-1 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-lg ;
-  }
-
-  #buttonblog{
-    @apply mx-18;
-  }
-
-  #skillCards{
-    @apply ml-18;
-  }
-
-
-  */
-
   h1 {
     @apply text-3xl md:text-4xl mb-6 md:mb-8;
   }
@@ -98,10 +52,6 @@
     @apply rounded-xl;
   }  
 
-  #blogcards-image{
-    @apply rounded-md;
-
-  }
 
   #blog-post-div > ul{
     @apply list-disc border-2 border-pink dark:border-yellow-300 rounded-xl text-base text-pink dark:text-yellow-300 py-2 px-4 my-8;
@@ -118,15 +68,6 @@
   p > code {
     @apply px-2 py-0.5 bg-pink dark:bg-yellow-300 text-light dark:text-dark rounded-lg whitespace-nowrap text-lg md:text-xl ;
   }
-
-  /* check here */
-  /* .NavigationSocialBar{
-    @apply md:mr-6;
-  }
-  
-  .NavigationLinks{
-    @apply md:ml-4;
-  } */
 
   .index-main-image{
     border: none;
@@ -148,9 +89,7 @@
     
   }
 
-  .blogcardtext {
-    height: 5rem;
-  }
+ 
   .skillslist > div {
     @apply  mr-1  text-center justify-center mb-1 ;
 
@@ -172,4 +111,40 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
+  .blogcardpublisher{
+    justify-content: start;
+    align-items: center;
+    
+    
+  }
+
+  /*blog cards css*/
+  .blogcardfooter{
+    display: flex;
+    flex-direction:row;
+    justify-content: start;
+    gap: 5%;
+
+  }
+
+ .blogcardheader{
+   display: flex;
+   flex-direction: column;
+   flex-basis: 100px;
+   flex: 1;
+  
+   justify-content: center;
+   align-items: center;
+  }
+
+  #blogcards-image{
+    @apply rounded-md;
+
+  }
+
+  .blogcardtext {
+  }
+
+ 
 }
