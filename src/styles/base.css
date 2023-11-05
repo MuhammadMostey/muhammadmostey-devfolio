@@ -98,10 +98,6 @@
     @apply rounded-xl;
   }  
 
-  #blogcards-image{
-    @apply rounded-md;
-
-  }
 
   #blog-post-div > ul{
     @apply list-disc border-2 border-pink dark:border-yellow-300 rounded-xl text-base text-pink dark:text-yellow-300 py-2 px-4 my-8;
@@ -148,9 +144,7 @@
     
   }
 
-  .blogcardtext {
-    height: 5rem;
-  }
+ 
   .skillslist > div {
     @apply  mr-1  text-center justify-center mb-1 ;
 
@@ -175,11 +169,47 @@
 
   .blogcardpublisher{
     /* width: 10%; */
-    grid-template-columns: 0.25fr;
+    /* grid-template-columns: 0.25fr; */
+    justify-content: start;
+    align-items: center;
+    
+    
   }
 
   .blogcardfooter{
-    display: grid;
-    grid-template-columns: 1fr 6fr;
+    /* display: grid;
+    grid-template-columns: 1fr 6fr; */
+    display: flex;
+    flex-direction:row;
+    justify-content: start;
+    gap: 5%;
+
   }
+
+ .blogcardheader{
+  /* display: grid;
+  grid-template-columns: 1fr;
+  height: 1fr;
+  grid-column: 100px;
+   */
+
+   display: flex;
+   flex-direction: column;
+   flex-basis: 100px;
+   flex: 1;
+  
+   justify-content: center;
+   align-items: center;
+  }
+
+  #blogcards-image{
+    @apply rounded-md;
+
+  }
+
+  .blogcardtext {
+    /* height: 5rem; */
+  }
+
+ 
 }
