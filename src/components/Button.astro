@@ -1,6 +1,6 @@
 
 ---
-const {url, external, direction, title, css} = Astro.props;
+const {url, external, direction, title, css, icon} = Astro.props;
 import {Icon} from "astro-icon";
 
 
@@ -10,6 +10,7 @@ export interface Props {
   direction ? : string;
   title : string;
   css ? : string;
+  icon ? : string;
 }
 
 ---
@@ -28,7 +29,12 @@ export interface Props {
       <span>{title}</span>
 
       {external ? (<Icon name="ph:arrow-square-out" width="24" height="24" class="ml-2" />) : ("")}
+      
+
+
       {direction === "down" ? (<Icon name="ph:arrow-square-down" width="24" height="24" class="ml-2" />) : ("")}
+      {direction === "project" ? (<Icon name="api-app" width="24" height="24" class="ml-2" />) : ("")}
+
 
     </a>
   </p>
