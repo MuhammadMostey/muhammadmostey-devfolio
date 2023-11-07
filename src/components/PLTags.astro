@@ -1,0 +1,21 @@
+---
+const {tagName, css} = Astro.props;
+
+
+
+
+export interface Props {
+  tagName: string;
+  css ?: string;
+ 
+}
+
+
+---
+
+
+<div 
+class=`inline-block bg-opacity-40 rounded-xl m-1 ${css} px-1 text-sm`>
+    <div>{tagName}</div> 
+</div>
+

@@ -5,6 +5,7 @@ import {Image} from "astro:assets";
 import {sortByDate} from "../utils/sortByDate.js";
 import ProjButton from '../components/ProjButton.astro';
 import Icon from 'astro-icon';
+import PLTags from '../components/PLTags.astro';
 
 
 
@@ -17,9 +18,11 @@ function formatDateToDateString(dateString) {
 
 <Layout title="Muhammad Mostey | Projects">
     <h1>Projects</h1>
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" id="blogcards">
 
-                <div class="border-2 border-dark dark:border-light rounded-xl p-2 flex flex-col">
+
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" id="blogcards" style="position: relative;">
+
+                <div class="border-2 border-dark dark:border-light rounded-xl p-2 flex flex-col" style="position: relative;">
 
                     <div class="flex blogcardheader">
                         <a href="#" > 
@@ -28,38 +31,54 @@ function formatDateToDateString(dateString) {
                         </a>
                     </div>
                     
-
                     <div class="blogcardbody flex-row">
                         <a href="#">
                             <div class="py-2 text-base dark:text-yellow-300 text-pink">
-                                Devfolio website
+                                Devfolio Personal Website
                             </div>    
                         </a>
 
                         <div class="text-sm pb-2 blogcardtext">
-                            des
+                            Developed a portfolio website using front-end stack and JavaScript. 
                         </div>
                         
                     </div>
 
-                    <div class="flex flex-row justify-between items-center ">
-                        <ProjButton title="live"  url="#" live={true}  css=" m-0 p-0 text-sm " />
-                        <ProjButton title="Code" url="#"  live={false}  css=" md:ml-4 md:mx-2 mx-2" />
-                    </div>
-
-                    
-                    <!-- <div class="blogcardfooter">
-                        <div class="blogcardpublisher">
-                            <Image class="rounded-full float-left " src="../../public/images/projects/" width={40} height={40} quality={80} format="webp" alt="author"/>
-                        </div>
-                        <div class=" blogcardpublisher">
-                            <p class="text-sm m-0">Muha</p>
-                            <p class="text-sm m-0" > 12/may </p> 
+                    <div>
+                        <PLTags tagName="HTML" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                        <PLTags tagName="CSS" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                        <PLTags tagName="JavaScript" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                        <PLTags tagName="Astro" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                        <PLTags tagName="tailwind" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                        <PLTags tagName="netlify" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                        <PLTags tagName="swup" css="bg-pink text-dark dark:text-black dark:bg-yellow-300"/>
+                    </div>            
                         
-                        </div>
-                    </div> -->
-
+                            
+                    <div class="flex flex-row justify-end">
+                            
+                            <ProjButton title="live"  url="https://www.muhammadmostey.com/" live={true}  />
+                            <ProjButton title="Code" url="https://www.github.com/MuhammadMostey/muhammadmostey-devfolio.git" live={false}  />
+                    </div>
                     
                 </div>
+
+
     </div>
+
+
+
+<!--tag colors -->
+<!-- <PLTags tagName="CSS" css="bg-green-600 text-green-900 dark:text-black dark:bg-yellow-300"/>
+<PLTags tagName="CSS" css="bg-blue-600 text-blue-900 dark:text-black dark:bg-yellow-300"/>
+<PLTags tagName="CSS" css="bg-green-600 text-green-900 dark:text-light" />
+<PLTags tagName="CSS" css="bg-blue-600 text-blue-900 dark:text-light " />
+<PLTags tagName="CSS" css="bg-red-600 text-red-900 dark:text-light " />
+<PLTags tagName="CSS" css="bg-pink text-dark dark:text-light " />
+<PLTags tagName="CSS" css="bg-blue-600 text-blue-900 dark:text-light " /> -->
+
+
+
+<!-- <div class="bg-red-900 text-blue-300"></div> -->
+
 </Layout>
