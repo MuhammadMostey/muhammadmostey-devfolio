@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import SkCard from "../components/SkCard.astro";
 import { Icon } from "astro-icon";
 ---
 
@@ -10,11 +11,12 @@ import { Icon } from "astro-icon";
     <!-- Summary -->
     <h2 class="mt-6 mb-6">Summary</h2>
     <p>
-        <span class="key-information">Passionate Software Developer </span> who finds joy in solving problems with cutting-edge tech. I'm a passionate explorer and lifelong learner with a knack for unraveling the intricacies of our world. Enthusiastic problem solver, eager to contribute insatiable curiosity and analytical skills to innovative projects in the dynamic realms of science and technology.
+        <span class="key-information text-pink dark:text-yellow-300" >Passionate Software Engineer polyglot</span>, who finds joy in solving problems with cutting-edge tech. I'm a passionate explorer and lifelong learner with a knack for unraveling the intricacies of our world. Enthusiastic problem solver, eager to contribute insatiable curiosity and analytical skills to innovative projects in the dynamic realms of science and technology.
+
     </p>
 
     <p>
-        Experienced professional with 8+ years in <span class="key-information">Finance, Accounting, Management, Administration, Customer Service and IT </span>. Worked with Humanitarian NGOs, Private Firms, and Agencies
+        Experienced professional with 8+ years in <span class="key-information">IT, Finance, and Management </span>, now thriving as a passionate Software Developer. Open to relocation and eager to tackle new challenges with cutting-edge technology.
     </p>
 
     <p>
@@ -25,7 +27,7 @@ import { Icon } from "astro-icon";
     <!-- Skills Section-->
     <h2 id="skills" class="">Skills</h2>
 
-    <div
+    <!-- <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-2 sm:my-6 gap-4"
         id="skillCards"
     >
@@ -112,5 +114,75 @@ import { Icon } from "astro-icon";
                 <div> <Icon name="tr" width="24" height="24" class="inline mr-0.5" /> Turkish </div>
             </div>
         </Card>
-    </div>
+    </div> -->
+
+
+    <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-2 sm:my-6 gap-4 text-center "
+    id="skillCards">
+    
+    <SkCard id="skillCard">
+        <i class="fas fa-code text-2xl" slot="icon"></i>
+        <span slot="title"> Programming Languages </span>
+        <div class="skillslist">
+            <p>JavaScript, Python, Java, PHP, C, C++, SQL</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-laptop-code text-2xl" slot="icon"></i>
+        <span slot="title"> Frameworks & Technologies </span>
+        <div class="skillslist">
+            <p>HTML, CSS, Tailwind CSS, Bootstrap, Node.js, React, Next.js, WordPress, MySQL</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-tools text-2xl" slot="icon"></i>
+        <span slot="title"> Tools </span>
+        <div class="skillslist">
+            <p>Git, GitHub, Linux, Windows, Mac OS.</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-chart-line text-2xl" slot="icon"></i>
+        <span slot="title"> Data Analytics </span>
+        <div class="skillslist">
+            <p>Microsoft Excel, Power BI</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-briefcase text-2xl" slot="icon"></i>
+        <span slot="title"> Business </span>
+        <div class="skillslist">
+            <p>Microsoft Dynamics 365, Microsoft Office</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-paint-brush text-2xl" slot="icon"></i>
+        <span slot="title"> Design </span>
+        <div class="skillslist">
+            <p>Adobe Photoshop, Adobe Premiere</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-language text-2xl" slot="icon"></i>
+        <span slot="title"> Languages </span>
+        <div class="skillslist">
+            <p>English, Arabic, Kurdish, German, Turkish</p>
+        </div>
+    </SkCard>
+
+    <SkCard id="skillCard">
+        <i class="fas fa-briefcase-medical text-2xl" slot="icon"></i>
+        <span slot="title"> Professional Skills </span>
+        <div class="skillslist">
+            <p>Finance and Accounting, Project Management, IT, Administration, Programming, Data Analysis, Problem-solving, Customer Service</p>
+        </div>
+    </SkCard>
+    
 </Layout>

@@ -5,19 +5,23 @@ import devguyb from '../assets/images/dev-guy-b.png';
 import devguyf from '../assets/images/dev-guy-f.png';
 import devguyr from '../assets/images/dev-guy-r.png';
 import devguyn from '../assets/images/dev-guy-n.png';
+import moA from '../assets/images/moA.png';
+import moB from '../assets/images/moB.png';
 import resume from '../assets/documents/Resume - Muhammad Mostey.pdf';
 import { Image } from 'astro:assets';
 import Button from '../components/Button.astro';
+
+let siteDescriptiob = "Welcome to the personal website of Muhammad Mostey, a passionate Software Engineer with a strong background in Finance, Management, and IT. Explore my portfolio showcasing my projects, skills, and journey into the world of Software Engineering, Tech, and Scinece."
 ---
 
-<Layout title="Muhammad Mostey | Home" description="Muhammad Mostafa Mostey's Personal Portfolio Website">
+<Layout title="Muhammad Mostey | Home" description=`${siteDescriptiob}`>
 
     <!-- Section 1 in the homeoage -->
     <div class="flex flex-col xl:flex-row justify-between items-center">
         
         <!-- Part 1 of the first homepage section (Image) -->
         <div class="w-3/4 sm:w-3/5 xl:w-1/2 flex justify-center items-center xl:px-6 mb-4 xl:mb-0">
-            <Image src={devguyn} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp" class="index-main-image"/>
+            <Image src={moA} width={1200} height={1100} quality={80} alt="A rocketship in space." format="webp" class="index-main-image"/>
         </div>
         
         <!-- Part 2 of the first homepage section (Headline, subheading, buttons) -->
@@ -48,9 +52,12 @@ import Button from '../components/Button.astro';
                 JavaScript am besten machst. Update! -->
             </div>
 
+            
+              
+
             <div class="flex flex-row justify-between items-center ">
                 <Button  url={resume} external={true} title="Resume" css=" mx-1 md:mx-2" />
-                <Button  url="/projects"  title="Projects" direction="project" css=" md:ml-4 md:mx-2 mx-2" />
+                <Button  url="/projects"  title="Projects" direction="project" css=" md:ml-4 md:mx-2 mx-2 dark:bg-yellow-300 dark:border-yellow-300 border-pink bg-pink" />
             </div>
 
             <div class="flex flex-col items-center my-2">
@@ -58,6 +65,26 @@ import Button from '../components/Button.astro';
                     Contact
                 </a>
             </div>
+            
+
+            <section id="ai-resources">
+                <h3 class="mt-3">Tech Stack</h3>
+                <p class="m-0 pb-1"> <span class="text-pink dark:text-yellow-300">Languages:</span> JavaScript, Python, Java, PHP, C, C++, SQL.</p>
+                <p class="m-0 pb-1 "> <span class="text-pink dark:text-yellow-300">Frameworks & Technologies: </span> HTML, CSS, Tailwind CSS, Bootstrap, Node.js, React, Next.js, WordPress, MySQL.</p>
+                
+                <div class="flex flex-row justify-between items-center ">
+                    <Button  url="/about"  title="View All My Skills" direction="project" css="" />
+                </div>
+
+                <h3>AI is the Future of Tech</h3>
+                <p>I'm passionate about the advancements in Artificial Intelligence and its potential to solve real-world problems. Stay tuned as I dive into exciting AI projects and share my progress along the way.</p>
+                
+                <!-- List of AI projects or resources -->
+            </section>
+
+
+
+
 
         </div>
 

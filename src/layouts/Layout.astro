@@ -39,6 +39,8 @@ function copyrightDate(websiteDevelopedYear){
 		<meta name="msapplication-TileColor" content="#da532c">
 		<meta name="theme-color" content="#ffffff">
 		<!-- <link rel="icon" type="image/svg+xml" href="../../public/favicon.svg"/> -->
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	</head>
 
 	
@@ -56,11 +58,28 @@ function copyrightDate(websiteDevelopedYear){
 
 
 			<footer>
-				<div class="text-center mt-10 md:mt-0">
-					Copyright © {copyrightDate(websiteDevelopedYear)} Muhammad Mostey </div>
+				<hr class="border-0 border-t border-pink dark:border-yellow-300 mb-1 mt-10 md:mt-0">
+
+				<div class="flex flex-col md:flex-row md:justify-between">
+					<!-- Section One -->
+					<div class="flex flex-col items-center md:items-start w-full md:w-1/2 ">
+						<p class="text-sm md:text-lg text-center md:text-left w-full md:w-1/2 m-0">Contact Details</p>
+						<p class="text-sm md:text-base text-center md:text-left w-full md:w-1/2 m-0">Location: Erbil, Iraq</p>
+						<p class="text-sm md:text-base text-center md:text-left w-full md:w-1/2 m-0">Email: <a href="mailto:muhammadmostey@gmail.com" class="text-pink dark:text-yellow-300 hover:underline m-0">muhammadmostey@gmail.com</a></p>
+						<p class="text-sm md:text-base text-center md:text-left w-full md:w-1/2 m-0">Mobile: <a href="tel:+9647513506096" class="text-pink dark:text-yellow-300 hover:underline">+964 751 350 6096</a></p>
+					</div>
+					
+					<!-- Section Two -->
+					<div class="flex flex-col items-center  w-full md:w-1/2 justify-center content-center mt-2 md:mt-0"> <!-- mb-6 md:mb-0 -->
+						<p class="text-sm md:text-base text-center m-0">Copyright © {copyrightDate(websiteDevelopedYear)} Muhammad Mostafa Mostey</p>
+						<p class="text-sm md:text-base text-center m-0">Developed with ❤️ by Muhammad Mostey</p>
+					</div>
+					
+				</div>
 			</footer>
+			
 
-
+			<div class="mt-10 h-2"></div>
 			<NavigationMobile />
 
 
