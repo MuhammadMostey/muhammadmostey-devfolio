@@ -1,21 +1,13 @@
 ---
-const {tagName, css} = Astro.props;
-
-
-
-
+const {tagName, css, url} = Astro.props;
 export interface Props {
   tagName: string;
   css ?: string;
- 
+  url ?: string;
 }
-
 
 ---
 
-
-<div 
-class=`inline-block bg-opacity-40 rounded-xl ${css} px-1 text-sm`>
-    <div>{tagName}</div> 
-</div>
-
+<a href={url} class={`inline-block bg-opacity-40 rounded-xl ${css} px-1 text-sm`}>
+  <div>{tagName}</div>
+</a>
