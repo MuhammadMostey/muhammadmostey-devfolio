@@ -10,13 +10,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/mdx": "^4.2.6",
     "@astrojs/react": "^3.0.10",
-    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/tailwind": "^5.1.5",
     "@swup/a11y-plugin": "^4.5.0",
     "@swup/head-plugin": "^2.1.2",
     "@swup/scroll-plugin": "^3.3.2",
-    "astro": "^4.16.18",
+    "astro": "^5.7.13",
     "astro-icon": "^0.8.2",
     "swup": "^4.6.0",
     "tailwindcss": "^3.4.1"
