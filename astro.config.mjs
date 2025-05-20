@@ -19,8 +19,8 @@ export default defineConfig({
     mdx(),
   ],
 
-  experimental: {
-    // assets: true,
-    directRenderScript: true,
-  },
+  // experimental: {
+  //   // assets: true,
+  //   directRenderScript: true,
+  // },
 });
