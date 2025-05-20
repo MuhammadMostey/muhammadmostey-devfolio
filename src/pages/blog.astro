@@ -26,7 +26,7 @@ function formatDateToDateString(dateString) {
 
                     <div class="flex blogcardheader">
                         <a href={`/blog/${blogPostEntry.slug}`} > 
-                            <Image id="blogcards-image" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
+                            <Image id="blogcards-image" class="inline" src={blogPostEntry.data.image.src} width={600} height={450} quality={80} alt={blogPostEntry.data.image.alt} format="webp"/>
                         </a>
                     </div>
                     
@@ -47,7 +47,7 @@ function formatDateToDateString(dateString) {
                     
                     <div class=" blogcardfooter">
                         <div class="blogcardpublisher ">
-                            <Image class="rounded-full float-left inline" src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author" style={"display:inline;"}/>
+                            <Image class="rounded-full float-left" src={blogPostEntry.data.authorImage.src} width={40} height={40} quality={80} format="webp" alt="author"/>
                         </div>
                         <div class=" blogcardpublisher">
                             <p class="text-sm m-0">{blogPostEntry.data.author}</p>
