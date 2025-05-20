@@ -21,6 +21,6 @@ export default defineConfig({
 
   experimental: {
     // assets: true,
-    optimizeHoistedScript: true,
+    directRenderScript: true,
   },
 });
