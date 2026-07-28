@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.6",
-    "@astrojs/react": "^3.0.10",
+    "@astrojs/react": "^6.0.1",
     "@astrojs/tailwind": "^5.1.5",
     "@swup/a11y-plugin": "^4.5.0",
     "@swup/head-plugin": "^2.1.2",
